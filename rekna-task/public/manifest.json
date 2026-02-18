@@ -1,0 +1,16 @@
+{
+  "author": "Hailer Oy",
+  "contributors": [
+    "rekna_4968@botinen.fi"
+  ],
+  "appId": "698f233672963b5d5fec67f9",
+  "version": "1.0.0",
+  "versionDescription": "Initial production release - recurring event matrix view",
+  "config": {
+    "fields": {
+      "workflowId": {
+        "type": "string"
+      }
+    }
+  }
+}

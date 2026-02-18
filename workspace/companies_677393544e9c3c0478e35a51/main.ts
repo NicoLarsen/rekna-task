@@ -1,0 +1,137 @@
+// Configuration for workflow: Companies
+      
+import { Companies_FieldIds, Companies_PhaseIds, HailerMembers, WorkflowIds, WorkspaceTeams } from "../enums";
+      
+export const workflowConfig: HailerWorkflowUpdatePayload = {
+  _id: WorkflowIds.companies_a51,
+  coverImage: "68dcc836831ee9dda77e0dbd",
+  createNewLabel: "Add Project",
+  defaultView: "kanban",
+  description: "More extensive tracking from sales to delivery",
+  discussionPermissions: [
+    "discussion.message.add",
+    "discussion.message.add.attachment",
+    "discussion.read.history",
+    "discussion.message.remove.own",
+    "discussion.leave"
+  ],
+  enableAddedField: true,
+  enableAttachments: true,
+  enableLinkedAnnouncements: false,
+  enableMapLocation: false,
+  enableMessenger: true,
+  enableModifiedField: true,
+  enableOwnerField: true,
+  enablePredefinedName: false,
+  enablePreselectedTeam: true,
+  enableUniqueName: true,
+  enableUnlinkedMode: false,
+  fieldsOrder: [
+    Companies_FieldIds.company_info_762,
+    Companies_FieldIds.ytunnus_b80,
+    Companies_FieldIds.person_responsible_for_client_6ba,
+    Companies_FieldIds.user_responsible_for_client_908,
+    Companies_FieldIds.sold_accounting_services_643,
+    Companies_FieldIds.person_responsible_for_accounting_ba4,
+    Companies_FieldIds.user_responsible_for_accounting_709,
+    Companies_FieldIds.closing_of_the_settlement_account_80c,
+    Companies_FieldIds.accounting_for_bank_statements_reference_payments_6e6,
+    Companies_FieldIds.depreciation_7dc,
+    Companies_FieldIds.recording_of_purchase_invoices_7ac,
+    Companies_FieldIds.recording_of_inventory_values_83c,
+    Companies_FieldIds.recording_of_sales_from_another_system_886,
+    Companies_FieldIds.deferred_taxes_8b7,
+    Companies_FieldIds.checking_the_accounts_receivable_ledger_8f8,
+    Companies_FieldIds.vat_calculation_created_618,
+    Companies_FieldIds.vat_report_sent_61b,
+    Companies_FieldIds.vat_paid_61f,
+    Companies_FieldIds.accounting_a52,
+    Companies_FieldIds.sold_payroll_services_927,
+    Companies_FieldIds.person_responsible_for_payroll_c04,
+    Companies_FieldIds.user_responsible_for_payroll_999,
+    Companies_FieldIds.payroll_de0,
+    Companies_FieldIds.hourly_entries_9df,
+    Companies_FieldIds.salaries_sent_for_approval_a45,
+    Companies_FieldIds.payroll_accounting_a10,
+    Companies_FieldIds.holiday_pay_reserve_vacation_days_aea,
+    Companies_FieldIds.salaries_paid_a97,
+    Companies_FieldIds.separate_report_bbd,
+    Companies_FieldIds.separate_report_payment_c04,
+    Companies_FieldIds.obligations_netvisor_term_b76,
+    Companies_FieldIds.travel_expenses_c65,
+    Companies_FieldIds.contents_of_the_financial_statements_c9e,
+    Companies_FieldIds.person_responsible_for_financial_statements_66c,
+    Companies_FieldIds.user_responsible_for_financical_statements_a56,
+    Companies_FieldIds.financial_statement_c35,
+    Companies_FieldIds.adjustments_to_depreciation_d59,
+    Companies_FieldIds.tax_accrual_d70,
+    Companies_FieldIds.advance_tax_e2c,
+    Companies_FieldIds.all_balance_sheet_accounts_checked_df4,
+    Companies_FieldIds.audited_ee3,
+    Companies_FieldIds.financial_statement_signed_eaf,
+    Companies_FieldIds.tax_return_filed_f2c,
+    Companies_FieldIds.financial_statement_ready_e7f,
+    Companies_FieldIds.annual_general_meeting_f5b,
+    Companies_FieldIds.financial_statement_registered_f90,
+    Companies_FieldIds.dividend_tax_paid_ff5,
+    Companies_FieldIds.annual_dividend_report_024,
+    Companies_FieldIds.dividend_recorded_05e,
+    Companies_FieldIds.dividend_report_fc6,
+    Companies_FieldIds.licenses_accounting_f80,
+    Companies_FieldIds.accounting_deadline_434,
+    Companies_FieldIds.fiscal_year_updated_in_hailer_cdb,
+    Companies_FieldIds.payroll_deadline_463,
+    Companies_FieldIds.fiscal_year_03b,
+    Companies_FieldIds.deadline_for_financial_statement_16d,
+    Companies_FieldIds.old_fields_ce4,
+    Companies_FieldIds.other_services_8f4,
+    Companies_FieldIds.total_mrr_d67,
+    Companies_FieldIds.signing_probability_a54,
+    Companies_FieldIds.est_signing_date_a55,
+    Companies_FieldIds.lost_for_reason_a58,
+    Companies_FieldIds.customer_satisfaction_a59,
+    Companies_FieldIds.time_spent_total_cea,
+    Companies_FieldIds.shares_cd1,
+    Companies_FieldIds.shares_listing_d5f,
+    Companies_FieldIds.category_2b4,
+    Companies_FieldIds.systems_9df,
+    Companies_FieldIds.systems_in_use_a25,
+    Companies_FieldIds.admin_45f,
+    Companies_FieldIds.ohjausryhm_43a,
+    Companies_FieldIds.shares_metadata_f65
+  ],
+  members: [
+    {
+      id: HailerMembers.johan_borgstrm_776,
+      info: {},
+      permissions: [
+        "admin"
+      ]
+    },
+    {
+      id: HailerMembers.workspace,
+      info: {},
+      permissions: [
+        "any"
+      ]
+    }
+  ],
+  name: "Companies",
+  nameColumnText: "Name",
+  nameEditable: false,
+  nameFieldPlaceHolderText: "Give a Title",
+  order: 0,
+  personInChargeLabel: "",
+  phasesOrder: [
+    Companies_PhaseIds.leads_a5b,
+    Companies_PhaseIds.active_contact_a5c,
+    Companies_PhaseIds.customers_a60,
+    Companies_PhaseIds.churn_a5e
+  ],
+  predefinedNamePrefix: "ETULIITE",
+  preselectedTeam: {
+    account: "675b24f48a5aeaa8084153e4",
+    team: WorkspaceTeams.rekna_team_3e3
+  }
+};
+      

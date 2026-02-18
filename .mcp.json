@@ -1,0 +1,1 @@
+{"mcpServers":{"hailer":{"type":"stdio","command":"npx","args":["mcp-remote","http://localhost:3030/api/mcp?apiKey=unique-api-key-for-this-agent"],"env":{}}}}

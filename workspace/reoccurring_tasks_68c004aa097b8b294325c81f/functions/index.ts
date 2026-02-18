@@ -1,0 +1,34 @@
+// Auto-generated index of field functions
+// Import and re-export all field functions
+
+export { accounting_for_bank_statements_reference_payments_005 } from "./accounting_for_bank_statements_reference_payments_005";
+export { recording_of_purchase_invoices_00b } from "./recording_of_purchase_invoices_00b";
+export { depreciation_018 } from "./depreciation_018";
+export { closing_of_the_settlement_account_01d } from "./closing_of_the_settlement_account_01d";
+export { recording_of_inventory_values_025 } from "./recording_of_inventory_values_025";
+export { recording_of_sales_from_another_system_02d } from "./recording_of_sales_from_another_system_02d";
+export { deferred_taxes_038 } from "./deferred_taxes_038";
+export { checking_the_accounts_receivable_ledger_049 } from "./checking_the_accounts_receivable_ledger_049";
+export { hourly_entries_064 } from "./hourly_entries_064";
+export { payroll_accounting_069 } from "./payroll_accounting_069";
+export { salaries_sent_for_approval_072 } from "./salaries_sent_for_approval_072";
+export { salaries_paid_07a } from "./salaries_paid_07a";
+export { holiday_pay_reserve_vacation_days_085 } from "./holiday_pay_reserve_vacation_days_085";
+export { obligations_netvisor_term_08a } from "./obligations_netvisor_term_08a";
+export { separate_report_092 } from "./separate_report_092";
+export { separate_report_payment_09a } from "./separate_report_payment_09a";
+export { travel_expenses_0a5 } from "./travel_expenses_0a5";
+export { adjustments_to_depreciation_0b2 } from "./adjustments_to_depreciation_0b2";
+export { tax_accrual_0ba } from "./tax_accrual_0ba";
+export { all_balance_sheet_accounts_checked_0c5 } from "./all_balance_sheet_accounts_checked_0c5";
+export { advance_tax_0ce } from "./advance_tax_0ce";
+export { financial_statement_ready_0d6 } from "./financial_statement_ready_0d6";
+export { financial_statement_signed_0de } from "./financial_statement_signed_0de";
+export { audited_0f2 } from "./audited_0f2";
+export { tax_return_filed_111 } from "./tax_return_filed_111";
+export { annual_general_meeting_139 } from "./annual_general_meeting_139";
+export { financial_statement_registered_14d } from "./financial_statement_registered_14d";
+export { dividend_report_155 } from "./dividend_report_155";
+export { dividend_tax_paid_15d } from "./dividend_tax_paid_15d";
+export { annual_dividend_report_167 } from "./annual_dividend_report_167";
+export { dividend_recorded_172 } from "./dividend_recorded_172";

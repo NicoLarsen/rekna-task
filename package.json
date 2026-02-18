@@ -1,0 +1,42 @@
+{
+  "name": "ReknaTasks",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Hailer workflows for Rekna",
+  "scripts": {
+    "pull": "hailer-sdk ws-config pull --verbose",
+    "push": "hailer-sdk ws-config push --verbose",
+    "push:force": "hailer-sdk ws-config push --force --verbose",
+    "workflows-push": "hailer-sdk ws-config workflows push --verbose",
+    "workflows-sync": "hailer-sdk ws-config workflows sync --verbose",
+    "workflows-sync:force": "hailer-sdk ws-config workflows sync --force --verbose",
+    "fields-push": "hailer-sdk ws-config fields push --verbose",
+    "fields-push:force": "hailer-sdk ws-config fields push --force --verbose",
+    "phases-push": "hailer-sdk ws-config phases push --verbose",
+    "phases-push:force": "hailer-sdk ws-config phases push --force --verbose",
+    "groups-push": "hailer-sdk ws-config groups push --verbose",
+    "groups-push:force": "hailer-sdk ws-config groups push --force --verbose",
+    "teams-push": "hailer-sdk ws-config teams push --verbose",
+    "teams-push:force": "hailer-sdk ws-config teams push --force --verbose",
+    "insights-push": "hailer-sdk ws-config insights push --verbose",
+    "insights-push:force": "hailer-sdk ws-config insights push --force --verbose",
+    "templates-push": "hailer-sdk ws-config templates push --verbose",
+    "templates-sync": "hailer-sdk ws-config templates sync --verbose",
+    "templates-sync:force": "hailer-sdk ws-config templates sync --force --verbose",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "sdk-update": "npm install @hailer/sdk@latest && npm run postinstall",
+    "mcp-start": "hailer-mcp",
+    "mcp-update": "npm install @hailer/mcp@latest && npm run postinstall",
+    "postinstall": "rm -rf ./.opencode && cp -r ./node_modules/@hailer/mcp/.opencode ./ && rm -rf ./.claude && cp -r ./node_modules/@hailer/mcp/.claude ./ && rm -f CLAUDE.md && cp ./node_modules/@hailer/mcp/CLAUDE.md ./ && rm -f ./workspace/hailer.d.ts && cp ./node_modules/@hailer/sdk/dist/types/hailer.d.ts ./workspace/"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0",
+    "@hailer/sdk": "latest",
+    "vitest": "^4.0.14",
+    "@vitest/ui": "^4.0.14",
+    "@hailer/mcp": "latest"
+  }
+}
