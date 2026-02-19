@@ -380,12 +380,14 @@ export async function updateCategoryComment(
     return;
   }
 
-  console.log(`[dataService] Updating ${category} comment for ${activityId}`);
+  console.log(`[dataService] Updating ${category} comment for ${activityId}: "${comment}"`);
+  // Use null to clear the field when comment is empty (Hailer ignores empty strings)
+  const fieldValue = comment.trim() === '' ? null : comment;
   await hailer.activity.update([
     {
       _id: activityId,
       fields: {
-        [fieldId]: comment,
+        [fieldId]: fieldValue,
       },
     },
   ], {});

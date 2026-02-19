@@ -4,8 +4,8 @@
     "rekna_4968@botinen.fi"
   ],
   "appId": "698f233672963b5d5fec67f9",
-  "version": "1.0.0",
-  "versionDescription": "Initial production release - recurring event matrix view",
+  "version": "1.1.0",
+  "versionDescription": "Added VAT tasks (ALV laskelma, ilmoitus, maksettu) to Accounting section",
   "config": {
     "fields": {
       "workflowId": {
