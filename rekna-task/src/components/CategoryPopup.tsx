@@ -13,7 +13,7 @@ import {
   Box,
   Textarea,
 } from '@chakra-ui/react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Company, RecurringTaskActivity } from '../types';
 import {
   ACCOUNTING_TASKS,
@@ -49,13 +49,19 @@ export default function CategoryPopup({
   const [commentSaved, setCommentSaved] = useState(false);
   const { language, t } = useLanguage();
 
-  // Reset local changes and load comment when opened
+  // Track previous isOpen to detect when popup opens
+  const prevIsOpenRef = useRef(false);
+
+  // Reset local changes and load comment only when popup OPENS (not on every activity change)
+  // This prevents other users' updates from resetting your local edits
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && !prevIsOpenRef.current) {
+      // Popup just opened - initialize state
       setLocalChanges(new Map());
       setComment(activity?.categoryComments[category] || '');
       setCommentSaved(false);
     }
+    prevIsOpenRef.current = isOpen;
   }, [isOpen, activity, category]);
 
   // Get tasks for the category
