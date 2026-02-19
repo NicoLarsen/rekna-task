@@ -4,8 +4,8 @@
     "rekna_4968@botinen.fi"
   ],
   "appId": "698f233672963b5d5fec67f9",
-  "version": "1.1.1",
-  "versionDescription": "Fix: clearing comments now saves properly",
+  "version": "1.1.2",
+  "versionDescription": "Fix: use empty string to clear comments (not null)",
   "config": {
     "fields": {
       "workflowId": {

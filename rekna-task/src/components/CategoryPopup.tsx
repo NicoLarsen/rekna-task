@@ -165,7 +165,14 @@ export default function CategoryPopup({
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
                   onBlur={() => {
-                    if (comment !== (activity?.categoryComments[category] || '')) {
+                    const originalComment = activity?.categoryComments[category] || '';
+                    console.log('[CategoryPopup] onBlur:', {
+                      currentComment: comment,
+                      originalComment,
+                      isDifferent: comment !== originalComment,
+                    });
+                    if (comment !== originalComment) {
+                      console.log('[CategoryPopup] Saving comment...');
                       onCommentChange(comment);
                       setCommentSaved(true);
                     }

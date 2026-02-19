@@ -380,15 +380,26 @@ export async function updateCategoryComment(
     return;
   }
 
-  console.log(`[dataService] Updating ${category} comment for ${activityId}: "${comment}"`);
-  // Use null to clear the field when comment is empty (Hailer ignores empty strings)
-  const fieldValue = comment.trim() === '' ? null : comment;
-  await hailer.activity.update([
-    {
-      _id: activityId,
-      fields: {
-        [fieldId]: fieldValue,
+  // Use empty string to clear text fields (null may be ignored by some APIs)
+  const fieldValue = comment.trim() === '' ? '' : comment;
+  console.log(`[dataService] Updating ${category} comment for ${activityId}:`, {
+    fieldId,
+    fieldValue,
+    isClearing: fieldValue === '',
+  });
+
+  try {
+    const result = await hailer.activity.update([
+      {
+        _id: activityId,
+        fields: {
+          [fieldId]: fieldValue,
+        },
       },
-    },
-  ], {});
+    ], {});
+    console.log(`[dataService] Update result:`, result);
+  } catch (err) {
+    console.error(`[dataService] Update failed:`, err);
+    throw err;
+  }
 }
