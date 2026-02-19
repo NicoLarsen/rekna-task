@@ -141,11 +141,11 @@ export async function fetchRecurringTasks(
         statusValues[fieldId] = value;
       });
 
-      // Extract category comments
+      // Extract category comments (trim to handle ' ' workaround for clearing)
       const categoryComments: Record<string, string> = {
-        'Accounting': getTextValue(activity, ACCOUNTING_COMMENT_FIELD_ID) || '',
-        'Payroll': getTextValue(activity, PAYROLL_COMMENT_FIELD_ID) || '',
-        'Financial Statements': getTextValue(activity, FS_COMMENT_FIELD_ID) || '',
+        'Accounting': (getTextValue(activity, ACCOUNTING_COMMENT_FIELD_ID) || '').trim(),
+        'Payroll': (getTextValue(activity, PAYROLL_COMMENT_FIELD_ID) || '').trim(),
+        'Financial Statements': (getTextValue(activity, FS_COMMENT_FIELD_ID) || '').trim(),
       };
 
       return {
@@ -380,12 +380,14 @@ export async function updateCategoryComment(
     return;
   }
 
-  // Use empty string to clear text fields (null may be ignored by some APIs)
-  const fieldValue = comment.trim() === '' ? '' : comment;
+  // Workaround: Use single space to "clear" since null doesn't work and empty string fails validation
+  // The UI trims display, so ' ' appears as empty to users
+  const isEmpty = comment.trim() === '';
+  const fieldValue = isEmpty ? ' ' : comment;
   console.log(`[dataService] Updating ${category} comment for ${activityId}:`, {
     fieldId,
     fieldValue,
-    isClearing: fieldValue === '',
+    isClearing: isEmpty,
   });
 
   try {
